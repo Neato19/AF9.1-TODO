@@ -1,0 +1,134 @@
+/* TABLET */
+@media only screen and (min-width: 769px) {
+  html {
+    font-size: 15px;
+  }
+
+  body {
+    height: 100vh;
+    grid-template-rows: 0.75fr 0.5fr 5fr 0.25fr;
+    gap: 12.5px;
+  }
+  
+  nav a {
+    width: 200px;
+    height: 60px;
+  }
+
+  nav a:hover {
+    scale: 1.04;
+  }
+
+  nav a:active {
+    scale: 1;
+  }
+
+  main section {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  main section:first-child {
+    grid-area: madrid;
+  }
+
+  main section:nth-child(2) {
+    grid-area: paris;
+  }
+
+  main section:last-child {
+    grid-area: london;
+  }
+
+  /* GRID */
+
+  main {
+    grid-template-areas:
+      "madrid paris"
+      "london london";
+
+    gap: 12.5px;
+  }
+}
+
+/* PC SCREEN */
+@media only screen and (min-width: 1106px) {
+  html {
+    font-size: 16px;
+  }
+
+  header {
+    height: 125px;
+    grid-area: header;
+  }
+
+  header img {
+    height: 110px;
+    width: 137.5px;
+  }
+
+  nav {
+    grid-area: nav;
+  }
+
+  nav a {
+    height: 200px;
+    width: 200px;
+  }
+
+  nav a:hover {
+    scale: 1.1;
+  }
+
+  nav a:active {
+    scale: 1;
+  }
+
+  main {
+    grid-area: main;
+    gap: 25px;
+  }
+
+  main section:nth-child(3) {
+    margin-right: 25px;
+  }
+
+  footer {
+    height: 125px;
+
+    grid-area: footer;
+  }
+
+  /* GRID */
+
+  body {
+    grid-template-columns: 0.2fr 1fr;
+    grid-template-rows: 0.75fr 5fr 0.25fr;
+    grid-template-areas:
+      "header header"
+      "nav main"
+      "footer footer";
+    gap: 25px;
+  }
+
+  nav {
+    flex-direction: column;
+
+    padding: 20px;
+  }
+
+  nav a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+
+    margin: 20px 0px;
+
+    font-size: 18px;
+  }
+
+  main {
+    grid-template-areas: "madrid paris london";
+  }
+}
